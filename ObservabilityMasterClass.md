@@ -186,6 +186,506 @@ Examples:
 - Session replay
 
 ---
+# 3A. Data Collection & Monitoring Technologies
+
+## Monitoring Collection Methods
+
+### Agent-Based Monitoring
+
+Dedicated software installed on monitored systems.
+
+Examples:
+
+- Dynatrace OneAgent
+- Datadog Agent
+- New Relic Agent
+- Zabbix Agent
+- Splunk Universal Forwarder
+- Telegraf
+
+Advantages:
+
+✅ Deep visibility
+
+✅ Low latency data collection
+
+✅ Process-level monitoring
+
+✅ Application instrumentation
+
+Use Cases:
+
+- OS monitoring
+- Application monitoring
+- Kubernetes nodes
+- Database monitoring
+
+---
+
+### Agentless Monitoring
+
+Data collected remotely without local installation.
+
+Advantages:
+
+✅ Simplified deployment
+
+✅ No server footprint
+
+✅ Fast onboarding
+
+Use Cases:
+
+- Network devices
+- Legacy systems
+- Security appliances
+
+---
+
+## Core Monitoring Protocols
+
+### SNMP
+
+Simple Network Management Protocol
+
+Used for:
+
+- Routers
+- Switches
+- Firewalls
+- Load Balancers
+- Storage Systems
+- UPS
+
+Versions:
+
+- SNMP v1
+- SNMP v2c
+- SNMP v3 (recommended)
+
+Common Metrics:
+
+- Interface utilization
+- CPU
+- Memory
+- Temperature
+- Hardware status
+
+---
+
+### IPMI
+
+Intelligent Platform Management Interface
+
+Used for:
+
+- Physical servers
+- Hardware health monitoring
+
+Monitored Data:
+
+- Power supply
+- Fans
+- Temperature
+- Hardware alarms
+
+Examples:
+
+- Dell iDRAC
+- HP iLO
+- Lenovo XClarity
+
+---
+
+### WMI
+
+Windows Management Instrumentation
+
+Used for:
+
+- Windows servers
+- Microsoft workloads
+
+Metrics:
+
+- CPU
+- Memory
+- Services
+- Event Logs
+- IIS
+
+---
+
+### SSH
+
+Secure Shell Monitoring
+
+Used for:
+
+- Linux
+- Unix
+
+Capabilities:
+
+- Script execution
+- Process validation
+- Log analysis
+- Performance checks
+
+---
+
+### JMX
+
+Java Management Extensions
+
+Used for:
+
+- Java applications
+
+Platforms:
+
+- Tomcat
+- JBoss
+- WildFly
+- WebLogic
+- Kafka
+- ActiveMQ
+
+Metrics:
+
+- Heap usage
+- Garbage Collection
+- Thread count
+- Connection pools
+- JVM performance
+
+---
+
+### OpenTelemetry
+
+Modern cloud-native telemetry framework
+
+Collects:
+
+- Metrics
+- Logs
+- Traces
+
+Benefits:
+
+✅ Vendor neutral
+
+✅ CNCF standard
+
+✅ Multi-cloud support
+
+---
+
+# Application Protocol Monitoring
+
+## Web Protocols
+
+### HTTP
+
+Monitoring:
+
+- Availability
+- Response code
+- Response time
+- Content validation
+
+Common Checks:
+
+- HTTP GET
+- HTTP POST
+- API Validation
+
+---
+
+### HTTPS
+
+Monitoring:
+
+- Availability
+- SSL/TLS validity
+- Certificate expiration
+- Cipher verification
+
+Critical KPI:
+
+Certificate days-to-expiration
+
+---
+
+## File Transfer Protocols
+
+### FTP
+
+Monitoring:
+
+- Login validation
+- Transfer performance
+- Availability
+
+---
+
+### FTPS
+
+FTP over SSL/TLS
+
+Monitoring:
+
+- Authentication
+- Certificate validation
+- Throughput
+
+---
+
+### SFTP
+
+SSH File Transfer Protocol
+
+Monitoring:
+
+- Login validation
+- File presence
+- Transfer duration
+
+---
+
+## Email Protocols
+
+### SMTP
+
+Checks:
+
+- Mail relay
+- Queue health
+- Response time
+
+---
+
+### POP3
+
+Checks:
+
+- Authentication
+- Mailbox access
+
+---
+
+### IMAP
+
+Checks:
+
+- Folder access
+- Synchronization
+- Authentication
+
+---
+
+## Directory Services
+
+### LDAP
+
+Monitoring:
+
+- Authentication
+- Search operations
+- Response time
+
+---
+
+### LDAPS
+
+Monitoring:
+
+- Secure authentication
+- Certificate monitoring
+
+---
+
+## Database Protocols
+
+### Oracle
+
+Metrics:
+
+- Sessions
+- Wait Events
+- Tablespaces
+
+---
+
+### SQL Server
+
+Metrics:
+
+- Query performance
+- Locks
+- Deadlocks
+
+---
+
+### PostgreSQL
+
+Metrics:
+
+- Connections
+- Replication
+- Query latency
+
+---
+
+### MySQL
+
+Metrics:
+
+- Replication
+- Slow queries
+- Buffer usage
+
+---
+
+## Messaging Protocols
+
+### Kafka
+
+Metrics:
+
+- Consumer lag
+- Broker health
+- Throughput
+
+---
+
+### AMQP
+
+Platforms:
+
+- RabbitMQ
+- ActiveMQ
+
+Metrics:
+
+- Queue depth
+- Message rates
+- Consumer status
+
+---
+
+### MQTT
+
+IoT Monitoring
+
+Metrics:
+
+- Broker availability
+- Topic throughput
+- Connected clients
+
+---
+
+## DNS Monitoring
+
+Checks:
+
+- Resolution
+- Latency
+- Zone transfers
+- Authoritative responses
+
+---
+
+## NTP Monitoring
+
+Checks:
+
+- Time drift
+- Synchronization status
+
+---
+
+## Cloud APIs
+
+### AWS APIs
+
+Services:
+
+- CloudWatch
+- EC2
+- RDS
+- EKS
+
+---
+
+### Azure APIs
+
+Services:
+
+- Azure Monitor
+- Log Analytics
+- Application Insights
+
+---
+
+### Google Cloud APIs
+
+Services:
+
+- Cloud Monitoring
+- Cloud Logging
+
+---
+
+# Protocol Monitoring Maturity
+
+Level 1
+
+✅ ICMP Ping
+
+✅ Port Checks
+
+---
+
+Level 2
+
+✅ SNMP
+
+✅ WMI
+
+✅ SSH
+
+---
+
+Level 3
+
+✅ JMX
+
+✅ Database Monitoring
+
+✅ API Monitoring
+
+---
+
+Level 4
+
+✅ OpenTelemetry
+
+✅ Distributed Tracing
+
+✅ Service Mesh Observability
+
+---
+
+Level 5
+
+✅ AI-driven Correlation
+
+✅ Autonomous Remediation
+
+✅ Full Business Service Observability
+---
 
 # 4. Observability Maturity Model
 
